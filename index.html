@@ -14,23 +14,25 @@
         <img id="mobile-logo" src="https://t4.ftcdn.net/jpg/05/36/24/13/360_F_536241340_GsrsNhcWC0hyTVaJLilNafyDw6fl0cC8.jpg" alt="Mobile Logo">
     </header>
     <main>
-        <div class="title">
+        <nav>
             <h2>Cellphones</h2>
             <h2>Add Cellphone to Inventory</h2>
-        </div>
+        </nav>
 
-        <section>
-            <article id="cellphones-tab">
+        <!-- Swap section for article -->
+        <article>
+            <!-- Swap with section -->
+            <section id="cellphones-tab">
                 <article id="preset-phone1">
                     <div class="phone-pic-item">
                         <img class="phone-pic" src="https://i5.walmartimages.com/seo/Verizon-iPhone-15-Pro-Max-512GB-Natural-Titanium_43b58742-b6ad-491a-a795-e6c2eb6bcc6f.d6fa026332e1941b129f607c592844ab.jpeg" alt="iPhone 15 Pro Max 256GB Natural Titanium">
                     </div>
                     <div class="grid-item">
-                        <p><strong>Name: </strong>iPhone 15 Pro Max</p>
-                        <p><strong>Brand: </strong>Apple</p>
-                        <p><strong>Color: </strong>Natural Titanium</p>
-                        <p><strong>Storage: </strong>256GB</p>
-                        <p><strong>Price: </strong>$1199</p>
+                        <p><span>Name: </span>iPhone 15 Pro Max</p>
+                        <p><span>Brand: </span>Apple</p>
+                        <p><span>Color: </span>Natural Titanium</p>
+                        <p><span>Storage: </span>256GB</p>
+                        <p><span>Price: </span>$1199</p>
                         <button>In Stock</button>
                         <button>Remove</button>
                     </div>
@@ -40,11 +42,11 @@
                         <img class="phone-pic" src="https://target.scene7.com/is/image/Target/GUEST_61fb68c6-4f0b-4507-97ca-e10957950219?wid=488&hei=488&fmt=pjpeg" alt="Samsung S23 Ultra 256GB Phantom Black">
                     </div>
                     <div class="grid-item">
-                        <p><strong>Name: </strong>Samsung S23 Ultra</p>
-                        <p><strong>Brand: </strong>Samsung</p>
-                        <p><strong>Color: </strong>Phantom Black</p>
-                        <p><strong>Storage: </strong>256GB</p>
-                        <p><strong>Price: </strong>$1199</p>
+                        <p><span>Name: </span>Samsung S23 Ultra</p>
+                        <p><span>Brand: </span>Samsung</p>
+                        <p><span>Color: </span>Phantom Black</p>
+                        <p><span>Storage: </span>256GB</p>
+                        <p><span>Price: </span>$1199</p>
                         <button>In Stock</button>
                         <button>Remove</button>
                     </div>
@@ -54,37 +56,41 @@
                         <img class="phone-pic" src="https://lh3.googleusercontent.com/spp/ABYooDqcQV_p4Dc4gQcvi1k1kUeNDvOF3MdA1ZRYqLxFU9xOYdgUzpQ84VbGqLw-K2h1Fw81oRH8l_QtIyNNvYVC87P-7nn3JrLTF9vf8WEe654qQex_qKkSgrqj_nSg6tRP5qEL5BNhuhm6d5J9YAbu6-jdhmFU7GF5WXwq9GsKQMSX_1LTs2G-P_2sMaMN2Pbr-qBX5Nye=s512-rw-pd-pc0x00ffffff" alt="Google Pixel 8 Pro  256GB Bay Blue">
                     </div>
                     <div class="grid-item">
-                        <p><strong>Name: </strong>Google Pixel 8 Pro</p>
-                        <p><strong>Brand: </strong>Google</p>
-                        <p><strong>Color: </strong>Bay Blue</p>
-                        <p><strong>Storage: </strong>256GB</p>
-                        <p><strong>Price: </strong>$1100</p>
+                        <!-- change strong to span and use css to make bold -->
+                        <p><span>Name: </span>Google Pixel 8 Pro</p>
+                        <p><span>Brand: </span>Google</p>
+                        <p><span>Color: </span>Bay Blue</p>
+                        <p><span>Storage: </span>256GB</p>
+                        <p><span>Price: </span>$1100</p>
                         <button>In Stock</button>
                         <button>Remove</button>
                     </div>
                 </article>
-            </article>
-            <article id="add-cellphone-tab">
+            </section>
+
+            <section id="add-cellphone-tab">
                 <div>
-                    <label for="textbox">Name of Cellphone:</label>  
-                    <input type="text" id="textbox" name="textbox">
-                    <label for="textbox">Brand:</label>  
-                    <input type="text" id="textbox" name="textbox">  
-                    <label for="textbox">Color:</label>  
-                    <input type="text" id="textbox" name="textbox">
-                    <label for="textbox">Storage:</label>  
-                    <input type="text" id="textbox" name="textbox">  
-                    <label for="textbox">Price:</label>  
-                    <input type="text" id="textbox" name="textbox">    
-                    <label for="textbox">In Stock:</label>  
-                    <input type="text" id="textbox" name="textbox">
+                    <label for="phone-name">Name of Cellphone:</label>  
+                    <input type="text" id="phone-name" name="phone-name">
+                    <label for="url">Image URL:</label>
+                    <input type="url" name="url" id="url">
+                    <label for="brand">Brand:</label>  
+                    <input type="text" id="brand" name="brand">  
+                    <label for="color">Color:</label>  
+                    <input type="text" id="color" name="color">
+                    <label for="storage">Storage:</label>  
+                    <input type="text" id="storage" name="storage">  
+                    <label for="price">Price:</label>  
+                    <input type="text" id="price" name="price">    
+                    <label for="stock-select">In Stock:</label>  
+                    <input type="text" id="stock-select" name="stock-select">
                 </div>
                 <div>
                     <button class="create-button">Create Cellphone</button>     
                     <button class="create-button">Reset</button>     
                 </div>
-            </article>
-        </section>
+            </section>
+        </article>
     </main>
     
 </body>

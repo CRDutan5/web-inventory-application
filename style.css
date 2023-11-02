@@ -28,7 +28,7 @@ header h1{
     justify-self: end;
 }
 
-.title {
+nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -37,11 +37,21 @@ header h1{
     background-color: #9BBEC8;
 }
 
-section {
+article {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     background-color: #DDF2FD;
+}
+
+#cellphones-tab {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#add-cellphone-tab {
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .phone-pic {
@@ -79,6 +89,10 @@ input {
 button {
     padding: 10px 10px;
     margin: 20px 0px;
+}
+
+p span {
+    font-weight: bold;
 }
 
 @media (max-width: 533px) {
