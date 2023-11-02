@@ -33,8 +33,8 @@
                         <p><span>Color: </span>Natural Titanium</p>
                         <p><span>Storage: </span>256GB</p>
                         <p><span>Price: </span>$1199</p>
-                        <button>In Stock</button>
-                        <button>Remove</button>
+                        <button class="stock-button">In Stock</button>
+                        <button class="remove-button">Remove</button>
                     </div>
                 </article>
                 <article id="preset-phone2">
@@ -47,8 +47,8 @@
                         <p><span>Color: </span>Phantom Black</p>
                         <p><span>Storage: </span>256GB</p>
                         <p><span>Price: </span>$1199</p>
-                        <button>In Stock</button>
-                        <button>Remove</button>
+                        <button class="stock-button">In Stock</button>
+                        <button class="remove-button">Remove</button>
                     </div>
                 </article>
                 <article id="preset-phone3">
@@ -62,8 +62,8 @@
                         <p><span>Color: </span>Bay Blue</p>
                         <p><span>Storage: </span>256GB</p>
                         <p><span>Price: </span>$1100</p>
-                        <button>In Stock</button>
-                        <button>Remove</button>
+                        <button class="stock-button">In Stock</button>
+                        <button class="remove-button">Remove</button>
                     </div>
                 </article>
             </section>
@@ -73,7 +73,7 @@
                     <label for="phone-name">Name of Cellphone:</label>  
                     <input type="text" id="phone-name" name="phone-name">
                     <label for="url">Image URL:</label>
-                    <input type="url" name="url" id="url">
+                    <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size ="30" required>
                     <label for="brand">Brand:</label>  
                     <input type="text" id="brand" name="brand">  
                     <label for="color">Color:</label>  
@@ -81,9 +81,13 @@
                     <label for="storage">Storage:</label>  
                     <input type="text" id="storage" name="storage">  
                     <label for="price">Price:</label>  
-                    <input type="text" id="price" name="price">    
-                    <label for="stock-select">In Stock:</label>  
-                    <input type="text" id="stock-select" name="stock-select">
+                    <input type="text" id="price" name="price">
+                    <label for="stock-select">In Stock</label>
+                    <select name="stock" id="stock-select">
+                        <option value="">Please Choose an Option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
                 </div>
                 <div>
                     <button class="create-button">Create Cellphone</button>     

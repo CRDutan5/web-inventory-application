@@ -56,6 +56,7 @@ article {
 
 .phone-pic {
     width: 100px;
+    padding: 13px;
 }
 
 #preset-phone1 {
@@ -79,7 +80,7 @@ article {
     margin-bottom: 15px;
 }
 
-input {
+input, select {
     width: 70%;
     padding: 12px 20px;
     margin: 8px 0px;
@@ -100,6 +101,10 @@ p span {
         display: none;
     }
     header {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #preset-phone1, #preset-phone2, #preset-phone3 {
         display: grid;
         grid-template-columns: 1fr;
     }
