@@ -81,8 +81,12 @@ button {
     margin: 20px 0px;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 533px) {
     header img {
-        visibility: hidden;
+        display: none;
+    }
+    header {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
