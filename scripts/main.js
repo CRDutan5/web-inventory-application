@@ -26,58 +26,65 @@ removeButtons.forEach((removeButton) => {
 
 // Create Cellphone
 
-// Grab Elements
+ // confirm all your event values
+  // fix your variables in the template to match
+  // append your div to the DOM
+  // add event listeners to the buttons
 
-const phoneName = document.getElementById
-("phone-name");
+const createCellphoneDiv = document.querySelector("form");
 
-const imageUrl = document.getElementById
-("url");
+createCellphoneDiv.addEventListener("submit", (event) => {
 
-const brandName = document.getElementById
-("brand");
+    const { phonenamename, url, brand, color, storage, price, stock} = event.target;
 
-const phoneColor = document.getElementById
-("color");
+    event.preventDefault();
 
-const storage = document.getElementById
-("storage");
-
-const price = document.getElementById
-("price");
-
-const stock = document.getElementById
-("stock-select");
+    const createDiv = document.createElement("div");
 
 
-// Create template
+    createDiv.innerHTML = 
+    `
+    <p><span>Name: </span>${phonename.value}</p>
+    <p><span>Url: </span>${url.value}</p>
+    <p><span>Brand: </span>${brand.value}</p>
+    <p><span>Color: </span>${color.value}</p>
+    <p><span>Storage: </span>${storage.value}</p>
+    <p><span>Price: </span>${price.value}</p>
+    <p><span>Stock: </span>${stock.value}</p>
 
-const content = 
-`
-<p><span>Name: </span>${phoneName.value}</p>
-<p><span>Brand: </span>${brandName.value}</p>
-<p><span>Color: </span>${phoneColor.value}</p>
-<p><span>Storage: </span>${storage.value}</p>
-<p><span>Price: </span>${price.value}</p>
-<button class="stock-button">In Stock</button>
-<button class="remove-button">Remove</button>
-`
+    <button class="stock-button">In Stock</button>
+    <button class="remove-button">Remove</button>
+    `
+    const CellphoneTab = document.querySelector("#cellphones-tab");
 
-// const createCellPhoneTemplate = content.innerHTML;
-
-// console.log(createCellPhoneTemplate);
-
-
-
-
-
-
-// Create Cellphone Button Functionality
-
-const createCellphoneButton = document.querySelector("form");
-
-createCellphoneButton.addEventListener("click", (event) => {
-    // const newCellphone = `${phoneName.value} ${brandName.value} ${phoneColor.value} ${storage.value} ${price.value},`
-    console.log(event.target.brand.value);
-    console.log("hello");
+    CellphoneTab.append(createDiv);
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const content = 
+// `
+// <p><span>Name: </span>${phoneName.value}</p>
+// <p><span>Brand: </span>${brandName.value}</p>
+// <p><span>Color: </span>${phoneColor.value}</p>
+// <p><span>Storage: </span>${storage.value}</p>
+// <p><span>Price: </span>${price.value}</p>
+// <button class="stock-button">In Stock</button>
+// <button class="remove-button">Remove</button>
+// `
