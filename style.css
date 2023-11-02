@@ -34,12 +34,14 @@ header h1{
     grid-template-rows: 1fr;
     text-align: center;
     border: 2px solid black;
+    background-color: #9BBEC8;
 }
 
 section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    background-color: #DDF2FD;
 }
 
 .phone-pic {
@@ -77,4 +79,10 @@ input {
 button {
     padding: 10px 10px;
     margin: 20px 0px;
+}
+
+@media (max-width: 390px) {
+    header img {
+        visibility: hidden;
+    }
 }
