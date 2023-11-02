@@ -13,3 +13,13 @@ stockButtons.forEach(stockButton => {
     })
 })
 
+// Remove Cellphone Button Functionality
+
+const removeButtons = document.querySelectorAll(".remove-button");
+
+removeButtons.forEach((removeButton) => {
+    removeButton.addEventListener("click", (event) => {
+        console.log(removeButton);
+        removeButton.closest("article").remove();
+    })
+})
