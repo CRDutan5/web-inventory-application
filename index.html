@@ -15,8 +15,8 @@
     </header>
     <main>
         <nav>
-            <h2>Cellphones</h2>
-            <h2>Add Cellphone to Inventory</h2>
+            <h2 id="cellphones-title">Cellphones</h2>
+            <h2 id="add-cellphone-title">Add Cellphone to Inventory</h2>
         </nav>
 
         <!-- Swap section for article -->
@@ -25,7 +25,7 @@
             <section id="cellphones-tab">
                 <article id="preset-phone1">
                     <div class="phone-pic-item">
-                        <img class="phone-pic" src="https://i5.walmartimages.com/seo/Verizon-iPhone-15-Pro-Max-512GB-Natural-Titanium_43b58742-b6ad-491a-a795-e6c2eb6bcc6f.d6fa026332e1941b129f607c592844ab.jpeg" alt="iPhone 15 Pro Max 256GB Natural Titanium">
+                        <img class="phone-pic" src="./images/iphone15-pro-max.jpeg" alt="iPhone 15 Pro Max 256GB Natural Titanium">
                     </div>
                     <div class="grid-item">
                         <p><span>Name: </span>iPhone 15 Pro Max</p>
@@ -39,7 +39,7 @@
                 </article>
                 <article id="preset-phone2">
                     <div class="phone-pic-item">
-                        <img class="phone-pic" src="https://target.scene7.com/is/image/Target/GUEST_61fb68c6-4f0b-4507-97ca-e10957950219?wid=488&hei=488&fmt=pjpeg" alt="Samsung S23 Ultra 256GB Phantom Black">
+                        <img class="phone-pic" src="./images/s23-ultra-black.jpeg" alt="Samsung S23 Ultra 256GB Phantom Black">
                     </div>
                     <div class="grid-item">
                         <p><span>Name: </span>Samsung S23 Ultra</p>
@@ -53,7 +53,7 @@
                 </article>
                 <article id="preset-phone3">
                     <div class="phone-pic-item">
-                        <!-- <img class="phone-pic" src="https://lh3.googleusercontent.com/spp/ABYooDqcQV_p4Dc4gQcvi1k1kUeNDvOF3MdA1ZRYqLxFU9xOYdgUzpQ84VbGqLw-K2h1Fw81oRH8l_QtIyNNvYVC87P-7nn3JrLTF9vf8WEe654qQex_qKkSgrqj_nSg6tRP5qEL5BNhuhm6d5J9YAbu6-jdhmFU7GF5WXwq9GsKQMSX_1LTs2G-P_2sMaMN2Pbr-qBX5Nye=s512-rw-pd-pc0x00ffffff" alt="Google Pixel 8 Pro  256GB Bay Blue"> -->
+                        <img class="phone-pic" src="./images/pixel 8 pro photo.jpeg" alt="Google Pixel 8 Pro 256GB Bay Blue">
                     </div>
                     <div class="grid-item">
                         <!-- change strong to span and use css to make bold -->
@@ -79,15 +79,16 @@
                     <label for="color">Color:</label>  
                     <input type="text" id="color" name="color" required>
                     <label for="storage">Storage:</label>  
-                    <input type="text" id="storage" name="storage" required>  
+                    <input type="text" id="storage" name="storage" placeholder="Ex: 128GB" required>  
                     <label for="price">Price:</label>  
-                    <input type="text" id="price" name="price" required>
+                    <input type="text" id="price" name="price" placeholder="Ex: $999" required>
                     <label for="stock-select">In Stock</label>
                     <select name="stock" id="stock-select" required>
                         <option value="">Please Choose an Option</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
+                    <br>
                     <button id="create-button">Create Cellphone</button>     
                     <button id="reset-button" type="reset">Reset</button>     
                 </form>

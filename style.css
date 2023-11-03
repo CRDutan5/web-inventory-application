@@ -56,7 +56,7 @@ article {
 
 .phone-pic {
     width: 100px;
-    padding: 13px;
+    /* padding: 13px; */
 }
 
 #preset-phone1, 
@@ -66,13 +66,14 @@ article {
 .new-phone-article  {
     display: grid;
     grid-template-columns: 1fr 5fr;
+    margin-right: 15px;
 }
 
 
 #add-cellphone-tab label {
     display: block; 
     margin-top: 10px; 
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 input, select {
@@ -94,11 +95,15 @@ p span {
 
 .phone-pic-item img {
     width: 100px;
-    padding: 13px;
+    margin: 15px;
+}
+
+.grid-item {
+    margin: 15px;
 }
 
 
-@media (max-width: 533px) {
+@media (max-width: 540px) {
     header img {
         display: none;
     }
@@ -106,9 +111,21 @@ p span {
         display: grid;
         grid-template-columns: 1fr;
     }
-    #preset-phone1, #preset-phone2, #preset-phone3, .created-phone, 
-    .new-phone-article {
+    nav {
+        display: none;
+    }
+    article {
+        display: inline-block;
+    }
+    #add-cellphone-tab {
         display: grid;
         grid-template-columns: 1fr;
+        padding: 0 10% 0 10%;
+    }
+    #cellphones-tab {
+        padding: 10% 0 0 10%;
+    }
+    input {
+        width: 100%;
     }
 }
