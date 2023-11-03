@@ -36,6 +36,23 @@ removeButtons.forEach((removeButton) => {
 
 const createCellphoneDiv = document.querySelector("form");
 
+const resetButton = document.querySelector("#reset-button");
+
+const form = form.querySelector("form");
+
+function resetButtonFunctionality(){
+    resetButton.addEventListener("click", (event) => {
+        event.stopPropagation();
+        form.reset();
+    })
+}
+
+// form.addEventListener("submit", (event) => {
+//     form.reset();
+// })
+
+function createCellphoneTemplate(){
+
 createCellphoneDiv.addEventListener("submit", (event) => {
 
     event.preventDefault();
@@ -78,3 +95,4 @@ createCellphoneDiv.addEventListener("submit", (event) => {
     removeButtonFunctionality(removeButton);
 
 });
+}
