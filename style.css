@@ -96,6 +96,21 @@ p span {
     font-weight: bold;
 }
 
+.created-phone {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.phone-pic-item img {
+    width: 100px;
+    padding: 13px;
+}
+
+.new-phone-article {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
 @media (max-width: 533px) {
     header img {
         display: none;

@@ -39,13 +39,17 @@ createCellphoneDiv.addEventListener("submit", (event) => {
 
     event.preventDefault();
 
-    const createDiv = document.createElement("div");
+    const createArticle = document.createElement("article");
+    createArticle.classList.add("new-phone-article");
 
 
-    createDiv.innerHTML = 
+    createArticle.innerHTML = 
     `
+    <div class = "phone-pic-item">
+    <img src = "${url.value}" alt = "Image of phone">
+    </div>
+    <div class = "grid-item">
     <p><span>Name: </span>${phonename.value}</p>
-    <p><span>Url: </span>${url.value}</p>
     <p><span>Brand: </span>${brand.value}</p>
     <p><span>Color: </span>${color.value}</p>
     <p><span>Storage: </span>${storage.value}</p>
@@ -54,10 +58,11 @@ createCellphoneDiv.addEventListener("submit", (event) => {
 
     <button class="stock-button">In Stock</button>
     <button class="remove-button">Remove</button>
+    </div>
     `
     const CellphoneTab = document.querySelector("#cellphones-tab");
 
-    CellphoneTab.append(createDiv);
+    CellphoneTab.append(createArticle);
 })
 
 
