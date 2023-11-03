@@ -59,20 +59,15 @@ article {
     padding: 13px;
 }
 
-#preset-phone1 {
+#preset-phone1, 
+#preset-phone2, 
+#preset-phone3, 
+.created-phone, 
+.new-phone-article  {
     display: grid;
     grid-template-columns: 1fr 5fr;
 }
 
-#preset-phone2 {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-}
-
-#preset-phone3 {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-}
 
 #add-cellphone-tab label {
     display: block; 
@@ -96,20 +91,12 @@ p span {
     font-weight: bold;
 }
 
-.created-phone {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-}
 
 .phone-pic-item img {
     width: 100px;
     padding: 13px;
 }
 
-.new-phone-article {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-}
 
 @media (max-width: 533px) {
     header img {
@@ -119,7 +106,8 @@ p span {
         display: grid;
         grid-template-columns: 1fr;
     }
-    #preset-phone1, #preset-phone2, #preset-phone3 {
+    #preset-phone1, #preset-phone2, #preset-phone3, .created-phone, 
+    .new-phone-article {
         display: grid;
         grid-template-columns: 1fr;
     }

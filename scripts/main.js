@@ -34,24 +34,18 @@ const resetButton = document.querySelector("#reset-button");
 
 
 resetButton.addEventListener("click", (event) => {
-        // event.stopPropagation();
         form.reset();
 })
 
 
 
-// form.addEventListener("submit", (event) => {
-//     form.reset();
-// })
-
-// function createCellphoneTemplate(){
 
 form.addEventListener("submit", (event) => {
 
     event.preventDefault();
 
 
-    const { phonenamename, url, brand, color, storage, price, stock} = event.target;
+    const { phonename, url, brand, color, storage, price, stock} = event.target;
 
 
     const createArticle = document.createElement("article");
