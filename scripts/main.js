@@ -27,33 +27,26 @@ removeButtons.forEach((removeButton) => {
 })
 };
 
-// Create Cellphone
 
- // confirm all your event values
-  // fix your variables in the template to match
-  // append your div to the DOM
-  // add event listeners to the buttons
-
-const createCellphoneDiv = document.querySelector("form");
+const form = document.querySelector("form");
 
 const resetButton = document.querySelector("#reset-button");
 
-const form = form.querySelector("form");
 
-function resetButtonFunctionality(){
-    resetButton.addEventListener("click", (event) => {
-        event.stopPropagation();
+resetButton.addEventListener("click", (event) => {
+        // event.stopPropagation();
         form.reset();
-    })
-}
+})
+
+
 
 // form.addEventListener("submit", (event) => {
 //     form.reset();
 // })
 
-function createCellphoneTemplate(){
+// function createCellphoneTemplate(){
 
-createCellphoneDiv.addEventListener("submit", (event) => {
+form.addEventListener("submit", (event) => {
 
     event.preventDefault();
 
@@ -88,11 +81,15 @@ createCellphoneDiv.addEventListener("submit", (event) => {
     const CellphoneTab = document.querySelector("#cellphones-tab");
     CellphoneTab.append(createArticle);
 
+
+
     const stockButton = document.querySelector(".stock-button");
     stockButtonFunctionality(stockButton);
 
     const removeButton = createArticle.querySelector(".remove-button");
     removeButtonFunctionality(removeButton);
 
+    form.reset();
 });
-}
+
+
