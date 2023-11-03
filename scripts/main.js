@@ -54,15 +54,26 @@ createCellphoneDiv.addEventListener("submit", (event) => {
     <p><span>Color: </span>${color.value}</p>
     <p><span>Storage: </span>${storage.value}</p>
     <p><span>Price: </span>${price.value}</p>
-    <p><span>Stock: </span>${stock.value}</p>
+
+    
 
     <button class="stock-button">In Stock</button>
     <button class="remove-button">Remove</button>
+
     </div>
     `
     const CellphoneTab = document.querySelector("#cellphones-tab");
 
     CellphoneTab.append(createArticle);
+
+    const stockButton = createArticle.querySelector(".stock-button");
+    stockButton.addEventListener("click", () => {
+        if(stockButton.textContent === "In Stock"){
+            stockButton.textContent = "Out of Stock";
+        } else {
+            stockButton.textContent = "In Stock";
+        }
+    });
 })
 
 
