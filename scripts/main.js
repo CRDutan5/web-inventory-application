@@ -1,5 +1,6 @@
 // In Stock and Out of Stock Button Functionality
 
+function stockButtonFunctionality(){
 const stockButtons = document.querySelectorAll(".stock-button");
 
 stockButtons.forEach(stockButton => {
@@ -12,9 +13,11 @@ stockButtons.forEach(stockButton => {
         }
     })
 })
+};
 
 // Remove Cellphone Button Functionality
 
+function removeButtonFunctionality() {
 const removeButtons = document.querySelectorAll(".remove-button");
 
 removeButtons.forEach((removeButton) => {
@@ -22,7 +25,7 @@ removeButtons.forEach((removeButton) => {
         removeButton.closest("article").remove();
     })
 })
-
+};
 
 // Create Cellphone
 
@@ -35,9 +38,11 @@ const createCellphoneDiv = document.querySelector("form");
 
 createCellphoneDiv.addEventListener("submit", (event) => {
 
+    event.preventDefault();
+
+
     const { phonenamename, url, brand, color, storage, price, stock} = event.target;
 
-    event.preventDefault();
 
     const createArticle = document.createElement("article");
     createArticle.classList.add("new-phone-article");
@@ -57,50 +62,19 @@ createCellphoneDiv.addEventListener("submit", (event) => {
 
     
 
-    <button class="stock-button">In Stock</button>
+    <button class="stock-button">${stock.value === "yes" ? "In Stock" : "Out of Stock"}</button>
     <button class="remove-button">Remove</button>
 
     </div>
     `
+    
     const CellphoneTab = document.querySelector("#cellphones-tab");
-
     CellphoneTab.append(createArticle);
 
-    const stockButton = createArticle.querySelector(".stock-button");
-    stockButton.addEventListener("click", () => {
-        if(stockButton.textContent === "In Stock"){
-            stockButton.textContent = "Out of Stock";
-        } else {
-            stockButton.textContent = "In Stock";
-        }
-    });
-})
+    const stockButton = document.querySelector(".stock-button");
+    stockButtonFunctionality(stockButton);
 
+    const removeButton = createArticle.querySelector(".remove-button");
+    removeButtonFunctionality(removeButton);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const content = 
-// `
-// <p><span>Name: </span>${phoneName.value}</p>
-// <p><span>Brand: </span>${brandName.value}</p>
-// <p><span>Color: </span>${phoneColor.value}</p>
-// <p><span>Storage: </span>${storage.value}</p>
-// <p><span>Price: </span>${price.value}</p>
-// <button class="stock-button">In Stock</button>
-// <button class="remove-button">Remove</button>
-// `
+});
