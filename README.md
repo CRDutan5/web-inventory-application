@@ -1,4 +1,4 @@
-#Pursuit Mobile Inventory Portal
+# Pursuit Mobile Inventory Portal
 
 ## Introduction
 Welcome to Pursuit's Mobile Inventory Website! This web application provides you the user a new experience when it comes to checking the inventory of all the cellphones we offer. A new cellphone coming out and not yet registered in the system? No problem! This web application allows you to do the following:
